@@ -1,99 +1,98 @@
-body{
-    padding: 0;
+*{
+    /* 
+        The `*` selector applies styles to all elements on the page. 
+        It is often used for resetting default styles or applying a base style.
+    */
     margin: 0;
-    background-color: ;
+    padding: 0;
+    /*box-sizing: border-box; This is just for testing */
+}
+body{
+    min-height: 100vh;
+    background-image: url('../images/image-one.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 nav{
+    background-color: aliceblue;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     /* 
-        The `position: sticky;` property is used to position an element based on the user's scroll position.
-        It behaves like `relative` positioning until a specified scroll threshold is reached, 
-        at which point it "sticks" in place (like `fixed` positioning). 
-        This is often used for elements like headers or navigation bars that should remain visible 
-        while scrolling within a specific container.
+        The `box-shadow` property adds a shadow effect to the element. 
+        It takes values for horizontal offset, vertical offset, blur radius, and color.
     */
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #333;
 }
-
-.logo{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.nav-links{
-    display: flex;
-    align-items: center;
+nav .nav-links, .side-bar{
+    width: 100%;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-.nav-links a{
-    display: block;
-    padding: 30px 16px;
-    color: #111;
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    /* transition - Smoothly animates property changes over 100ms with an ease-in-out timing. */
-    transition: all ease-in-out 100ms;
-}
- .nav-links a:hover{
-    background-color: #111;
-    color: #fff;
-}
-
-.menu-btn{
-    display: none;
+    display: flex;
+    align-items: center;
+    color: black;
     cursor: pointer;
-    width: 34px;
 }
 
-.menu-btn .bar{
-    flex-basis: 100%;
-    height: 4px;
-    background-color: #111;
-    margin: 3px;
+nav a:hover{
+    background-color: #f0f0f0;
+    transition: all 0.3s ease-in-out;
+    /* 
+        The `transition` property allows you to change property values smoothly (over a given duration).
+        In this case, it applies to all properties over 0.3 seconds with an ease-in-out timing function.
+    */
+}
+nav li:first-child{
+    margin-right: auto;
+    font-size: large;
+    font-weight: bold;
+}
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    /* 
+        The `z-index` property specifies the stack order of an element. 
+        Elements with a higher `z-index` value are displayed in front of those with a lower value. 
+        In this case, the sidebar is given a high `z-index` to ensure it appears above other elements.
+    */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* 
+        The `align-items: flex-start` aligns the sidebar's child elements along the cross axis (vertical axis in this case) 
+        to the start of the container. 
+        The `justify-content: flex-start` aligns the child elements along the main axis (horizontal axis in this case) 
+        to the start of the container.
+    */
+}
+.side-bar li{
+    width: 100%;
+}
 
-    @media (max-width: 500px){
-        /* 
-            The `@media` rule is used to apply styles based on the viewport size. 
-            In this case, it targets screens with a maximum width of 500 pixels.
-        */}
-        nav{
-            flex-wrap: wrap;
-        }
 
-        .menu-btn{
-            display: flex;
-            flex-wrap: wrap;
-        }
 
-        .logo{
-            height: 80px;
-        }
-
-        .nav-links{
-            display: none;
-            flex-basis: 100%;
-            flex-wrap: wrap;
-        }
-        
-        .nav-links li{
-            flex-wrap: 100%;
-        }
-
-        .nav-links a{
-            text-align: center;
-            font-size: 28px;
-        }
-
-        .nav-links a:hover{
-            background-color: #111;
-        }
-        
-    }
+@media screen and (max-width: 768px){
+    /* 
+        The `@media` rule is used to apply styles based on the viewport size. 
+        In this case, it targets screens with a maximum width of 768 pixels, 
+        which is commonly used for mobile devices.
+    */
+    
+}
 }
