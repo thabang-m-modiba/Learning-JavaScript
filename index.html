@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic JavaScript</title>
+</head>
+<body>
+    <h1>Learning JavaScript</h1>
+    <h2>Data Types</h2>
+    <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Object</li>
+        <li>Array</li>
+        <li>Null</li>
+        <li>Undefined</li>
+    </ul>
+    <h2>Variables</h2>
+    <p>In JavaScript, variables can be declared using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+    <p>There are different ways to declare a variable.</p>
+    <h3>Different ways to declare a variable.</h3>
+    <ul>
+        <li>Using <code>var</code>: <code>var name = "Thabang";</code></li>
+        <li>Using <code>let</code>: <code>let age = 25;</code></li>
+        <li>Using <code>const</code>: <code>const IS_STUDENT = true;</code></li> <!--You can never change the variable.-->
+    </ul>
+    <p>Variable names are case sensetive.</p>
+
+    <h3>Naming Variables.</h3>
+    <ul>
+        <li>Variable names can contain letters, digits, underscores, and dollar signs.</li>
+        <li>Variable names must begin with a letter, underscore, or dollar sign.</li>
+        <li>Variable names cannot be JavaScript reserved words.</li>
+        <li>Variable names are case sensitive (y and Y are different variables).</li>
+        <li>Variable names should be meaningful.</li>
+    </ul>
+    <h2>The difference between declaring and Assigning variable.</h2>
+    <p>Declaring a variable means creating it, while assigning a variable means giving it a value. We use the assignment operator = to assign a variable.</p>
+
+    <h2>Increment and Decrement</h2>
+    <p>Incrementing a variable means increasing its value by 1, while decrementing a variable means decreasing its value by 1.</p>
+
+    <h2>Escape character</h2>
+    <p>The backslash (\) is used as an escape character in JavaScript. It allows you to include special characters in a string.</p>
+    <ul>
+        <li>\' - Single quote</li>
+        <li>\" - Double quote</li>
+        <li>\\ - Backslash</li>
+        <li>\n - New line</li>
+        <li>\r - Carriage return</li>
+        <li>\t - Tab</li>
+        <li>\b - Backspace</li>
+        <li>\f - Form feed</li>
+    </ul>
+
+    <h2>Concatenation</h2>
+    <p>Concatenation is the process of joining two or more strings together. In JavaScript, we use the + operator to concatenate strings.</p>
+    <p>Example: <code>"Hello, " + "world!"</code> results in <code>"Hello, world!"</code></p>
+    <p>We can also use the += operator to concatenate a string to an existing variable.</p>
+    <p>Example: <code>let message = "Hello, "; message += "world!";</code> results in <code>"Hello, world!"</code></p>
+
+    <h2>Arithmetic operators</h2>
+    <ul>
+        <li>+ (Addition)</li>
+        <li>- (Subtraction)</li>
+        <li>* (Multiplication)</li>
+        <li>/ (Division)</li>
+        <li>% (Modulus)</li>
+        <li>++ (Increment)</li>
+        <li>-- (Decrement)</li>
+    </ul>
+
+    <h2>Strings and dot length function.</h2>
+    <p>Strings are used to represent text in JavaScript. They are enclosed in single or double quotes.</p>
+    <p>The length property of a string returns the number of characters in the string.</p>
+    <p>Example: <code>"Hello".length</code> results in <code>5</code></p>
+    <h3>Immutability of Strings</h3>
+    <p>In JavaScript, strings are immutable, which means that once a string is created, it cannot be changed. Any operation that seems to modify a string actually creates a new string.</p>
+    <h3>Finding a character in a string</h3>
+    <p>You can access individual characters in a string using bracket notation and the index of the character you want to access. Note that string indices are zero-based, meaning the first character is at index 0.</p>
+    <p>Example: <code>"Hello"[0]</code> results in <code>"H"</code></p>
+    
+    <h2>Arrays</h2>
+    <p>Arrays are used to store multiple values in a single variable. They are created using square brackets [].</p>
+    <p>Example: <code>let fruits = ["Apple", "Banana", "Orange"];</code></p>
+    <p>Arrays can contain values of different data types, including strings, numbers, booleans, objects, and even other arrays.</p>
+    <p>You can access individual elements in an array using bracket notation and the index of the element you want to access. Note that array indices are zero-based, meaning the first element is at index 0.</p>
+    <p>Example: <code>fruits[0]</code> results in <code>"Apple"</code></p>
+    <p>The length property of an array returns the number of elements in the array.</p>
+    <p>Example: <code>fruits.length</code> results in <code>3</code></p>
+
+    <h3>Nested Arrays</h3>
+    <p>Arrays can contain other arrays as elements, creating a nested structure. You can access elements in nested arrays using multiple indices.</p>
+    <p>Example: <code>let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];</code></p>
+    <p>Accessing an element in a nested array: <code>matrix[1][2]</code> results in <code>6</code></p>
+
+    <h3>Modifying Arrays</h3>
+    <p>You can modify elements in an array by accessing them via their index and assigning a new value. Example: <code>fruits[1] = "Mango";</code> changes the second element from "Banana" to "Mango".</p>
+
+    <h3>push()</h3>
+    <p>The push() method adds one or more elements to the end of an array and returns the new length of the array.</p>
+    <p>Example: <code>fruits.push("Grapes");</code> adds "Grapes" to the end of the fruits array.</p>
+
+    <h3>pop()</h3>
+    <p>The pop() method removes the last element from an array and returns that element. This method changes the length of the array.</p>
+    <p>Example: <code>let lastFruit = fruits.pop();</code> removes "Grapes" from the end of the fruits array and stores it in the lastFruit variable.</p>
+
+    <h3>shift()</h3>
+    <p>The shift() method removes the first element from an array and returns that element. This method changes the length of the array.</p>
+    <p>Example: <code>let firstFruit = fruits.shift();</code> removes "Apple" from the beginning of the fruits array and stores it in the firstFruit variable.</p>
+
+    <h3>unshift()</h3>
+    <p>The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.</p>
+    <p>Example: <code>fruits.unshift("Strawberry");</code> adds "Strawberry" to the beginning of the fruits array.</p>
+
+    <h2>Creating reusable code (Functions).</h2>
+    <p>A function is a block of code designed to perform a particular task. It is executed when "something" invokes it (calls it).</p>
+    <p>Functions are defined using the <code>function</code> keyword, followed by the function name, parentheses (), and curly braces {}.</p>
+
+    <h3>Function Parameters and Arguments</h3>
+    <p>Functions can take parameters, which are placeholders for values that are passed to the function when it is called. The values passed to the function are called arguments.</p>
+    <p>Example: <code>function greet(name) { return "Hello, " + name + "!";}</code></p>
+
+    <h3>Return Statement</h3>
+    <p>The return statement is used to specify the value that a function should return when it is called. If a function does not have a return statement, it will return undefined by default.</p>
+    <p>Example: <code>function add(a, b) { return a + b; }</code></p>
+
+    <h2>Variable scopes</h2>
+    <p>Variable scope refers to the accessibility of variables in different parts of your code. In JavaScript, there are three types of scope: global scope, local scope, and block scope.</p>
+    <ul>
+        <li>Global Scope: Variables declared outside of any function or block have global scope and can be accessed from anywhere in the code.</li>
+        <li>Local Scope: Variables declared within a function have local scope and can only be accessed within that function.</li>
+        <li>Block Scope: Variables declared with let or const within a block (e.g., inside an if statement or loop) have block scope and can only be accessed within that block.</li>
+    </ul>
+
+    <h3>Global vs Local Scope</h3>
+    <p>Global variables can be accessed from any function, while local variables can only be accessed within the function they are declared in. It is generally a good practice to minimize the use of global variables to avoid potential conflicts and unintended side effects.</p>
+
+    <h2>JSON.stringify</h2>
+    <p>JSON.stringify() is a method that converts a JavaScript object or value to a JSON string. It is often used when sending data to a web server or storing data in a file.</p>
+    <p>Example: <code>let obj = { name: "Thabang", age: 25 };</code> <br> <code>let jsonString = JSON.stringify(obj);</code> results in <code>'{"name":"Thabang","age":25}'</code></p>
+    
+    <h2>Boolean values</h2>
+    <p>Boolean values represent one of two values: true or false. They are often used in conditional statements to control the flow of a program.</p>
+    
+    <h2>If statements</h2>
+    <p>If statements are used to execute a block of code if a specified condition is true. They can also include else and else if clauses to handle multiple conditions.</p>
+
+    <h2>Comparison operators</h2>
+    <ul>
+        <li>== (Equal to)</li>
+        <li>=== (Strict equal to)</li>
+        <li>!= (Not equal to)</li>
+        <li>!== (Strict not equal to)</li>
+        <li>&lt; (Less than)</li>
+        <li>&lt;= (Less than or equal to)</li>
+        <li>&gt; (Greater than)</li>
+        <li>&gt;= (Greater than or equal to)</li>
+    </ul>
+
+    <h3>Logical operators</h3>
+    <ul>
+        <li>&& (Logical AND)</li>
+        <li>|| (Logical OR)</li>
+        <li>! (Logical NOT)</li>
+    </ul>
+
+    <h3>Difference between equality operator and strictly equality operator</h3>
+    <p>The equality operator (==) compares two values for equality, but it performs type coercion if the values are of different types. The strictly equality operator (===) compares both the value and the type, and does not perform type coercion.</p>
+    <p>Example: <code>5 == "5"</code> results in <code>true</code>, while <code>5 === "5"</code> results in <code>false</code></p>
+    
+    <h2>Switch statements</h2>
+    <p>Switch statements are used to perform different actions based on different conditions. They are often used as an alternative to multiple if-else statements when you have a single variable to evaluate against multiple possible values.</p>
+
+    <h2>Objects</h2>
+    <p>Objects are used to store collections of data and more complex entities. They are created using curly braces {} and consist of key-value pairs.</p>
+    <p>Example: <code>let person = { name: "Thabang", age: 25, isStudent: true };</code></p>
+    <p>You can access object properties using dot notation or bracket notation.</p>
+
+    <h3>Accessing Object Properties</h3>
+    <p>Example using dot notation: <code>person.name</code> results in <code>"Thabang"</code></p>
+    <p>Example using bracket notation: <code>person["age"]</code> results in <code>25</code></p>
+
+    <h3>Modifying Object Properties</h3>
+    <p>You can modify object properties by accessing them via their key and assigning a new value. Example: <code>person.age = 26;</code> changes the age property from 25 to 26.</p>
+
+    <h3>Adding New Properties</h3>
+    <p>You can add new properties to an object by simply assigning a value to a new key. Example: <code>person.address = "South Africa";</code> adds a new property address to the person object.</p>
+
+    <h3>Deleting properties</h3>
+    <p>You can delete properties from an object using the delete operator. Example: <code>delete person.isStudent;</code> removes the isStudent property from the person object.</p>
+
+    <h3>Nested Objects</h3>
+    <p>Objects can contain other objects as properties, creating a nested structure. You can access properties in nested objects using multiple keys.</p>
+    <p>Example: <code>let student = { name: "Thabang", details: { age: 25, address: "South Africa" } };</code></p>
+    <p>Accessing a property in a nested object: <code>student.details.age</code> results in <code>25</code></p>
+
+    <h2>Loops</h2>
+    <p>Loops are used to execute a block of code multiple times. There are several types of loops in JavaScript, including for loops, while loops, and do-while loops.</p>
+    <ul>
+        <li>For Loop: Used to iterate over a block of code a specific number of times.</li>
+        <li>While Loop: Used to iterate over a block of code as long as a specified condition is true.</li>
+        <li>Do-While Loop: Similar to the while loop, but the block of code is executed at least once before checking the condition.</li>
+    </ul>
+
+    <h3>Do-While loops</h3>
+    <p>The do-while loop is similar to the while loop, but it guarantees that the code block will be executed at least once before the condition is tested. The syntax is as follows:</p><code>do {// code block to be executed} while (condition);</code>
+
+    <h3>Nested Loops</h3>
+    <p>Loops can be nested inside other loops to create more complex iterations. Example: A for loop inside another for loop to iterate over a 2D array.</p>
+
+    <h2>Maths.random()</h2>
+    <p>The Math.random() function returns a floating-point, pseudo-random number in the range 0 (inclusive) to 1 (exclusive). It is often used to generate random numbers for various purposes, such as games or simulations.</p>
+    <p>Example: <code>let randomNum = Math.random();</code> results in a random number between 0 and 1.</p>
+    <p>To generate a random number within a specific range, you can use the following formula:</p>
+    <p><code>Math.floor(Math.random() * (max - min + 1)) + min;</code></p>
+    <p>This will generate a random integer between the specified min and max values (inclusive).</p>
+
+    <h2>ParseInt()</h2>
+    <p>The parseInt() function is used to convert a string into an integer. It takes two arguments: the string to be converted and an optional radix (base) that specifies the numeral system to be used.</p>
+    <p>Example: <code>let num = parseInt("42");</code> results in <code>42</code></p>
+    <p>If the string cannot be converted to a valid integer, parseInt() will return NaN (Not a Number).</p>
+
+    <h2>Ternary Operator</h2>
+    <p>The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false. The syntax is as follows:</p>
+    <p><code>condition ? valueIfTrue : valueIfFalse;</code></p>
+    <p>Example: <code>let age = 18; let canVote = (age >= 18) ? "Yes" : "No";</code> results in <code>"Yes"</code></p>
+
+    <h2>Undefined vs Null</h2>
+    <p>Undefined and null are both used to represent the absence of a value, but they have different meanings. Undefined means that a variable has been declared but has not been assigned a value, while null is an assignment value that represents no value or no object.</p>
+    <p>Example of undefined: <code>let x; console.log(x);</code> results in <code>undefined</code></p>
+    <p>Example of null: <code>let y = null; console.log(y);</code> results in <code>null</code></p>
+
+    <h2>Object.freeze</h2>
+    <p>The Object.freeze() method is used to freeze an object, preventing new properties from being added to it, existing properties from being removed, and existing properties (or their enumerability, configurability, or writability) from being changed. In essence, it makes the object immutable.</p>
+    <p>Example: <code>let obj = { name: "Thabang"   }; Object.freeze(obj); obj.name = "John"; console.log(obj.name);</code> results in <code>"Thabang"</code></p>
+    <p>Note that Object.freeze() only applies to the immediate properties of the object. If the object contains nested objects, those nested objects can still be modified unless they are also frozen.</p>
+
+    <h2>Anonymous functions</h2>
+    <p>An anonymous function is a function that does not have a name. It is often used as an argument to other functions or as an immediately invoked function expression (IIFE).</p>
+    <p>Example of an anonymous function as an argument: <code>setTimeout(function() { console.log("Hello, World!"); }, 1000);</code></p>
+    <p>Example of an IIFE: <code>(function() { console.log("Hello, World!"); })();</code></p>
+
+    <h3>Arrow functions</h3>
+    <p>Arrow functions are a shorthand way of writing anonymous functions. They use the => syntax and have a more concise syntax than traditional function expressions.</p>
+    <p>Example of an arrow function: <code>let add = (a, b) => a + b;</code></p>
+    <p>Arrow functions do not have their own this value, which can be useful in certain situations, such as when working with callbacks or event handlers.</p>
+
+    <h4>Calling Arrow funcions</h4>
+    <p>Example of calling an arrow function: <code>console.log(add(2, 3));</code> results in <code>5</code></p>
+
+    <h2>console.log</h2>
+    <p>The console.log() function is used to print messages to the console. It is often used for debugging purposes.</p>
+
+    <h2>Destructing Assignment</h2>
+    <p>Destructuring assignment is a syntax that allows you to unpack values from arrays or properties from objects into distinct variables. It provides a more concise and readable way to extract data.</p>
+    <p>Example of array destructuring: <code>let [a, b] = [1, 2];</code> results in <code>a = 1</code> and <code>b = 2</code></p>
+    <p>Example of object destructuring: <code>let {name, age} = {name: "Thabang", age: 25};</code> results in <code>name = "Thabang"</code> and <code>age = 25</code></p>
+
+    <h2>Template Literals</h2>
+    <p>Template literals are a way to embed expressions within string literals, allowing for easier string interpolation and multi-line strings. They are enclosed in backticks (`) instead of single or double quotes.</p>
+    <p>Example of a template literal: <code>let name = "Thabang"; let message = `Hello, ${name}!`;</code> results in <code>"Hello, Thabang!"</code></p>
+    <p>Template literals can also span multiple lines without the need for escape characters.</p>
+    <p>Example of a multi-line template literal: <code>let multiLine = `This is line 1. This is line 2.`;</code></p>
+
+    <h2>Simple Fields</h2>
+    <p>Simple fields are a way to define properties on an object using a shorthand syntax. They allow you to create an object with properties that have the same name as the variables being assigned to them.</p>
+    <p>Example of simple fields: <code>let name = "Thabang"; let age = 25; let person = { name, age };</code> results in <code>{ name: "Thabang", age: 25 }</code></p>
+
+    <h2>Class</h2>
+    <p>A class is a blueprint for creating objects with shared properties and methods. It is a way to define a custom data type in JavaScript.</p>
+    <p>Example of a class: <code>class Person { constructor(name, age) { this.name = name; this.age = age; } greet() { return `Hello, my name is ${this.name} and I am ${this.age} years old.`; } }</code></p>
+    <p>Creating an instance of a class: <code>let person1 = new Person("Thabang", 25);</code></p>
+    <p>Calling a method on an instance: <code>console.log(person1.greet());</code> results in <code>"Hello, my name is Thabang and I am 25 years old."</code></p>
+
+    <h3>Constructor</h3>
+    <p>The constructor is a special method that is called when a new instance of a class is created. It is used to initialize the properties of the object.</p>
+    <p>Example of a constructor: <code>constructor(name, age) { this.name = name; this.age = age; }</code></p>
+    
+    <h2>Getters and Setters</h2>
+    <p>Getters and setters are special methods that allow you to define how to access and modify the properties of an object. Getters are used to retrieve the value of a property, while setters are used to set the value of a property.</p>
+    <p>Example of a getter: <code>let person = { firstName: "Thabang", lastName: "Mamoloko", get fullName() { return `${this.firstName} ${this.lastName}`; } };</code> Accessing the fullName property: <code>console.log(person.fullName);</code> results in <code>"Thabang Mamoloko"</code></p>
+    <p>Example of a setter: <code>let person = { firstName: "Thabang", lastName: "Mamoloko", set fullName(name) { [this.firstName, this.lastName] = name.split(" "); } };</code> Setting the fullName property: <code>person.fullName = "John Doe";</code> results in <code>person.firstName = "John"</code> and <code>person.lastName = "Doe"</code></p>
+
+    <h3>Classes, Getters and Setters</h3>
+    <p>Example of a class with getters and setters: 
+        <code>
+            class Person { 
+                constructor(firstName, lastName) { 
+                    this.firstName = firstName; 
+                    this.lastName = lastName; 
+                } 
+                get fullName() { 
+                    return `${this.firstName} ${this.lastName}`; 
+                } 
+                set fullName(name) { 
+                    [this.firstName, this.lastName] = name.split(" "); 
+                } 
+            }
+        </code>
+    </p>
+    <p>Creating an instance of the class: <code>let person1 = new Person("Thabang", "Mamoloko");</code></p>
+    <p>Accessing the fullName property: <code>console.log(person1.fullName);</code> results in <code>"Thabang Mamoloko"</code></p>
+    <p>Setting the fullName property: <code>person1.fullName = "John Doe";</code> results in <code>person1.firstName = "John"</code> and <code>person1.lastName = "Doe"</code></p>
+
+    <h2>Import and Export</h2>
+    <p>In JavaScript, the import and export statements are used to share code between different files or modules. The export statement is used to make a variable, function, or class available for use in other files, while the import statement is used to bring in code from other files.</p>
+    <p>Example of exporting a function: <code>export function greet(name) { return `Hello, ${name}!`; }</code></p>
+    <p>Example of importing a function: <code>import { greet } from './greet.js'; console.log(greet("Thabang"));</code> results in <code>"Hello, Thabang!"</code></p>
+
+    
+
+
+    <script>
+        /*var name = "Thabang"; // String
+
+        // String Concatenation (using the + operator)
+        console.log("Hello, World! My name is " + name);
+        // Incrementing and Decrementing
+        let age = 25; // Number
+        age++;
+        console.log("I am " + age + " years old.");*/
+
+        // Reusable Functions
+        /*function aboutMe(myName, myAge, myAddress){
+            var result = "";
+            result += "My name is " + myName + ", and I am " + myAge + " years old. I am from " + myAddress;
+            return result;
+        }
+
+        console.log(aboutMe("Thabang", 25, "South Africa"));*/
+
+        // If-else statements
+        /*function verifyName(name){
+            var results;
+            if(name === "Thabang"){
+                results = true;
+            }else{
+                results = false;
+            }
+            return results;
+        }
+        console.log(verifyName("Thabag"));*/
+
+        // Functions and arrays
+        /*function addNewName(name, nameList){
+            nameList.push(name);
+            return nameList;
+        }
+
+        function removeLastName(nameList){
+            var removedName = nameList.pop();
+            return removedName;
+        }
+
+        var newName = "Mamoloko";
+        var nameList = ["Thabang", "John", "Jane"];
+
+        addNewName(newName, nameList);
+        console.log("Removed name: " + removeLastName(nameList));
+        for(var i = 0; i < nameList.length; i++){
+            console.log(nameList[i]);
+        }*/
+
+        // Nested arrays and loops
+        /*var personalInfo = [["Thabang", 22, "South Africa"], ["Muzi", 25, "Swaziland"], ["John", 56, "America"]];
+
+        for(var i = 0; i < personalInfo.length; i++){
+            for(var j = 0; j < personalInfo[i].length; j++){
+                console.log(personalInfo[i][j]);
+            }
+        }*/
+
+        /*function markClass(number){
+            var results;
+            if(number >= 0 && number <= 39){
+                results = "Level 1";
+            }else if(number > 39 && number <= 49){
+                results = "Level 2";
+            }else if(number > 49 && number <= 59){
+                results = "Level 3";
+            }else if(number > 59 && number <= 69){
+                results = "Level 4";
+            }else if(number > 69 && number <= 79){
+                results = "Level 5";
+            }else if(number > 79 && number <= 100){
+                results = "Level 6";
+            }else{
+                results = "Invalid mark";
+            }
+
+            return results;
+        }
+        var studentInfo = [["Thabang", 22, "South Africa", 85], ["Muzi", 25, "Swaziland", 45], ["John", 56, "America", 75]];
+        for(var i = 0; i < studentInfo.length; i++){
+            for(var j = 0; j < studentInfo[i].length; j++){
+                console.log(studentInfo[i][3]);
+                console.log(markClass(studentInfo[i][3]));
+            }
+        }*/
+
+        // Switch statements
+        /*function classifyMarks(num){
+            var results;
+            switch(num){
+                case 1:
+                    results = "0% - 29%";
+                    break;
+                case 2:
+                    results = "30% - 39%";
+                    break
+                case 3:
+                    results = "40% - 49%";
+                    break;
+                case 4:
+                    results = "50% - 59%";
+                    break;
+                case 5:
+                    results = "60% - 69%";
+                    break;
+                case 6: 
+                    results = "70% - 79%";
+                    break;
+                case 7:
+                    results = "80% - 100%";
+                    break;
+                default:
+                    results = "Invalid mark";
+            }
+            return results;
+        }
+
+        console.log(classifyMarks(5));*/
+
+        // Objects
+        /*var student = {
+            name: "Thabang",
+            age: 25,
+            isStudent: true,
+            address: {
+                street: "123 Main St",
+                city: "South Africa",
+                zip: "12345"
+            },
+            courses: ["Math", "Applied Mathemaics", "Computer Science"]
+        };
+        console.log("Student Name: " + student.name);
+        console.log("Student Modules: ");
+        for(var i = 0; i < student.courses.length; i++){
+            console.log(student.courses[i]);
+        }*/
+
+        // While loops
+        /*function fillArray(){
+            var myArr = [];
+            while(myArr.length <= 10){
+                for(var i = 0; i <= 10; i++){
+                    myArr.push(i);
+                }
+            }
+            return myArr;
+        }
+        var arrayFilled = fillArray();
+        for(var i = 0; i < arrayFilled.length; i++){
+            console.log(arrayFilled[i]);
+        }*/
+    </script>
+</body>
+</html>
