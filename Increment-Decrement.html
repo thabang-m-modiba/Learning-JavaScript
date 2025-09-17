@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Increment and Decrement</title>
+    </head>
+    <body>
+        <!--
+        This code demonstrates the use of increment (++) and decrement (--) operators.
+        It manipulates numeric values by increasing or decreasing them by one.
+
+        Project Idea:
+        Create a simple counter application where users can increment or decrement a displayed number.
+        Add buttons for "Increment" and "Decrement" actions, and update the display accordingly.
+        Optionally, implement limits (e.g., minimum and maximum values) and show messages when those limits are reached.
+        -->
+        <form>
+            <label for="number">Number:</label>
+            <input type="number" id="number" placeholder="Enter a number">
+            <br><br>
+            <button type="button" onclick="increment()">Increment</button>
+            <button type="button" onclick="decrement()">Decrement</button>
+            <input type="number" id="result" placeholder="Result" readonly>
+        </form>
+        <script>
+            // This function increments the value in the input field by 1, 10 times
+            function increment(){
+                let num = document.getElementById("number").value;
+                for(var i = 0; i < 1; i++){
+                    num++;
+                    document.getElementById("result").value = num;
+                    // console.log(num);
+                }
+            }
+
+            // This function decrements the value in the input field by 1, 10 times
+            function decrement(){
+                let num = document.getElementById("number").value;
+                for(var i = 0; i < 1; i++){
+                    num--;
+                    document.getElementById("result").value = num;
+                    // console.log(num);
+                }
+            }
+        </script>
+    </body>
+</html>
