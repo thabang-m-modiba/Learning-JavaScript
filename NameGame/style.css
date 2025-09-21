@@ -4,91 +4,22 @@ body{
     box-sizing: border-box;
 }
 
-.head{
-    background-color: rgb(53, 198, 255);
-    padding: 1rem;
-}
-.name-game-header{
-    text-align: center;
-    font-size: 2cm;
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(0, 0, 0);
-    margin-top: 20px;
+#instruction-ctn{
+    display: flex;
+    flex-direction: column;
 }
 
-#form1-container{
+#start-btn-ctn{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
 
-#form1-container button{
-    min-width: 250px;
-    height: 40px;
-    background-color:  rgb(53, 198, 255);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-#name-container{
-    display: none;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#name-container div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:  rgb(0, 61, 141);
-    color: white;
-    font-family: "Luckiest Guy", cursive;
-    letter-spacing: 3px;
-    padding: 10px;
-    border-radius: 25px;
-}
-
-#game-content{
+#game-ctn{
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#game-content form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#game-content input{
-    min-width: 250px;
-    height: 40px;
-    padding: 5px;
-    border: 2px solid rgb(0, 61, 141);
-    border-radius: 25px;
-    text-align: center;
-    font-family: "Luckiest Guy", cursive;
-}
-
-#game-content button{
-    min-width: 250px;
-    height: 40px;
-    background-color:  rgb(53, 198, 255);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-@media (max-width: 600px){
-    #name-container{
-        flex-direction: column;
-        gap: 10px;
-    }
+    margin-top: 20px;
 }

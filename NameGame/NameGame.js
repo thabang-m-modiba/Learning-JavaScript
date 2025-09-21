@@ -1,59 +1,66 @@
+/**
+ * Game Features:
+ * 
+ * 1. Display a rearranged name from a predefined list of names.
+ * 2. Provide an input field for the user to guess the correct name.
+ * 3. Check the user's answer and provide feedback (correct/incorrect).
+ * 4. Proceed to the next name after each guess.
+ * 5. Keep track of the score (number of correct answers).
+ * 6. End the game after a certain number of rounds and display the final score.
+ * 7. Option to restart the game.
+ */
 
+function startGame() {
+    const names = ["Thabang", "Tshepho", "Moloko", "Thakgi", "Tumelo", "Alice", "Bob", "Charlie", "Diana", "Eve"];
+    const rearrangedNames = names.map(name => name.split('').sort(() => Math.random() - 0.5).join(''));
 
-function startGame(){
-    var names = ["Thabang", "Siyabonga", "Lindokuhle", "Nokuthula", "Siphesihle", "Zandile"];
-    var rearrangedNames = ["bnhatga", "gniyabosga", "duindoklhle", "ahokutnula", "hiiphesshle", "diandzle"];
-    document.getElementById("form1-container").style.display = "none";
-    document.getElementById("name-container").style.display = "flex";
-    document.getElementById("game-content").style.display = "flex";
-    
-    var randomName = rearrangedNames[getRandomNumber()];
-    document.getElementById("rearranged-name").innerHTML = randomName;
+    var score = 0;
+    var currentRound = 0;
 
-    for(var i = 0; i < names.length; i++){
-        var elementName = "name" + i.toString();
-        document.getElementById(elementName).innerHTML = names[i];
-        //console.log(elementName);
+    // Hide instructions and start button, show game container
+    document.getElementById("instruction-ctn").style.display = "none";
+    document.getElementById("start-btn-ctn").style.display = "none";
+    document.getElementById("game-ctn").style.display = "flex";
+
+    // Do while for rounds
+    document.getElementById("next").addEventListener("click", e =>{
+        do{
+            // Display the random name
+            if (currentRound >= 10) {
+                // End the game if all rounds are completed
+                document.getElementById("name-list-ctn").style.display = "none";
+                document.getElementById("rearranged-name-ctn").style.display = "none";
+                document.getElementById("user-answer").style.display = "none";
+                document.getElementById("final-results").innerHTML = "Game Over! Your score:";
+                break;
+            } else {
+                currentRound++;
+                document.getElementById("myRound").innerHTML = currentRound.toString() + "/10";
+                let randomInt = getRandomIndex();
+                document.getElementById("rearranged-name").innerHTML = rearrangedNames[randomInt];
+            }
+            
+        }while(false);
+    });
+
+    for(let i = 0; i < names.length; i++){
+        var name = "name" + i.toString();
+        document.getElementById(name).innerHTML = names[i];
     }
-}
 
-function checkAnswer(){
-    var names = ["Thabang", "Siyabonga", "Lindokuhle", "Nokuthula", "Siphesihle", "Zandile"];
-    var rearrangedNames = ["bnhatga", "gniyabosga", "duindoklhle", "ahokutnula", "hiiphesshle", "diandzle"];
-
-    var userAnswer = document.getElementById("answer").value;
-    var question = document.getElementById("rearranged-name").innerHTML;
-
-    if(userAnswer === "thabang" && question === "bnhatga"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else if(userAnswer === "siyabonga" && question === "gniyabosga"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else if(userAnswer === "lindokuhle" && question === "duindoklhle"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else if(userAnswer === "nokuthula" && question === "ahokutnula"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else if(userAnswer === "siphesihle" && question === "hiiphesshle"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else if(userAnswer === "zandile" && question === "diandzle"){
-        document.getElementById("results").innerHTML = "Correct! Well done.";
-        document.getElementById("results").style.color = "green";
-    }else{
-        document.getElementById("results").innerHTML = "Incorrect! Try again.";
-        document.getElementById("results").style.color = "red";
-    }
     
-    //console.log(question);
-    //console.log(userAnswer);
+
+    /*for(var i = 0; i < rearrangedNames.length; i++) {
+        console.log(`Rearranged Name: ${rearrangedNames[i]}`);
+    }*/
 }
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * 6);
+// Function to generate a random index
+function getRandomIndex() {
+    return Math.floor(Math.random() * 10);
 }
+
+//startGame();
 
 
 
