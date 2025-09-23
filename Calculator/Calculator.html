@@ -1,0 +1,57 @@
+<!--
+    * Building a simple calculator app that has the following mathematical operations:
+    * -> Addition
+    * -> Subtraction
+    * -> Multiplication
+    * -> Division
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="display-screen-ctnr">
+            <input type="text" id="display-screen" value="" readonly>
+        </div>
+
+        <div class="number-btn-ctnr">
+            <div class="top-row-btns">
+                <button id="seven-btn">7</button>
+                <button id="eight-btn">8</button>
+                <button id="nine-btn">9</button>
+            </div>
+
+            <div class="middle-row-btns">
+                <button id="four-btn">4</button>
+                <button id="five-btn">5</button>
+                <button id="six-btn">6</button>
+            </div>
+
+            <div class="btm-row-btns">
+                <button id="one-btn">1</button>
+                <button id="two-btn">2</button>
+                <button id="three-btn">3</button>
+            </div>
+
+            <div class="btm-btm-row-btns">
+                <button id="zero-btn">0</button>
+            </div>
+        </div>
+
+        <div class="operation-ctnr">
+            <button id="addition">+</button>
+            <button id="subtraction">-</button>
+            <button id="multiplication">*</button>
+            <button id="division">/</button>
+        </div>
+
+        <div class="equal-sign-ctnr">
+            <button id="equal-sign">=</button>
+        </div>
+
+        <script src="Calculator.js"></script>
+    </body>
+</html>

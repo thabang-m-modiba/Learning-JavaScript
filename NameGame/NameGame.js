@@ -24,7 +24,21 @@ function startGame() {
 
     // Do while for rounds
     document.getElementById("next").addEventListener("click", e =>{
-        do{
+
+        currentRound++;
+        if(currentRound > 10){
+            document.getElementById("myRound").innerHTML = currentRound.toString() + "/10";
+            let randomInt = getRandomIndex();
+            document.getElementById("rearranged-name").innerHTML = rearrangedNames[randomInt];
+        }else{
+            // End the game if all rounds are completed
+            document.getElementById("name-list-ctn").style.display = "none";
+            document.getElementById("rearranged-name-ctn").style.display = "none";
+            document.getElementById("user-answer").style.display = "none";
+            document.getElementById("final-results").innerHTML = "Game Over! Your score:";
+        }
+        
+        /*do{
             // Display the random name
             if (currentRound >= 10) {
                 // End the game if all rounds are completed
@@ -40,7 +54,7 @@ function startGame() {
                 document.getElementById("rearranged-name").innerHTML = rearrangedNames[randomInt];
             }
             
-        }while(false);
+        }while(false);*/
     });
 
     for(let i = 0; i < names.length; i++){
