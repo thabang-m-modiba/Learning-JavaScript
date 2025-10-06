@@ -62,6 +62,8 @@ Concatenation is the process of joining two or more Strings together. In JavaScr
 Example: ```"Hello, " + "world!"``` results in ```"Hello, world!"``` as a single String.
 
 We can also use the operator ```+=``` to concatenate a String to an existing variable. Example:
+```
+let message = "Hello, ";
+message += "world!";
+```
 
-```let message = "Hello, ";
-message += "world!";```
