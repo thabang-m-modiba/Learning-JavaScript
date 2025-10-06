@@ -65,5 +65,39 @@ We can also use the operator ```+=``` to concatenate a String to an existing var
 ```
 let message = "Hello, ";
 message += "world!";
+
+// Results in "Hello, world!"
+```
+
+## Arithmetic Operators in JavaScript
+* ```+``` Addition
+* ```-``` Subtraction
+* ```*``` Multiplication
+* ```/``` Division
+* ```%``` Modulus
+* ```++``` Increment
+* ```--``` Decrement
+
+## Strings and dot lenth function
+Strings are used to represent text in JavaScript. They are enclosed in single or double qoutes as we've seen. The length property of a String returns the number of characters in the String. Example:
+```
+var name = "Thabang";
+console.log(name.length);
+
+// Results: 5
+```
+
+### Immutability of Strings
+
+In JavaScript, Strings are immutable, which means once is a String is created, it cannot be changed. Any operation that seems to modify the String actually creates a new String.
+
+### Finding a character in a String
+
+You can access individual characters in a String using bracket notation and the index of the character you eant to access. Note that String indices are zero-based, meaning the first character is at index 0. Example:
+```
+var myName = "Thabang";
+console.log(myName[0]);
+
+// Results: T
 ```
 
