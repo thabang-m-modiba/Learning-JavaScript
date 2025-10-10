@@ -140,3 +140,24 @@ fruits.push("Banana"); // Adds "Banana" at the end of this array and returns the
 ```
 
 ### ```pop()```
+The ```pop()``` method removes the last element from the array and reutrns that element. This method changes the length of the array. Example:
+```
+let element = fruits.pop();
+// This removes "Banana" from the array and then assigns it to the variable element.
+```
+
+### ```shift()```
+The ```shift()``` method removes the first element from the array and then returns that element. Example:
+```
+let element = fruits.shift();
+// Tjis removes the "Apples" from the fruits arraya and then assigns it to the new variable element.
+```
+
+### ```unshift()```
+The ```unshift()``` method adds one or more elements at the beginning of the array and then returns the new length of the array. Example:
+```
+fruits.unshift("Apple");
+// This adds back the element "Apples" in the beginning of the fruits array and then returns the length of the new array.
+```
+
+## Creating reusable code (Functions).
