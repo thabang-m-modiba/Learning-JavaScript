@@ -101,3 +101,15 @@ console.log(myName[0]);
 // Results: T
 ```
 
+## Arrays
+Arrays are used to store multiple values in a single variable. They are created using square brackets []. Example:
+```
+let arrNames = ["Thabang", "Mamoloko", "Modiba"];
+```
+Arrays can contain vales of different data types, including Strings, number, booleans, Objects, and even other arrays. You can access individual elements in an array using bracket notation and the index if the element you want to access. Note that Array indices are zero-based, meaning the first element is at index 0. Example:
+```
+let arrNames = ["Thabang", "Mamoloko", "Modiba"];
+console.log(arrName[0])p
+// Results: "Thabang"
+```
+
