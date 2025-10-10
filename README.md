@@ -112,4 +112,31 @@ let arrNames = ["Thabang", "Mamoloko", "Modiba"];
 console.log(arrName[0])p
 // Results: "Thabang"
 ```
+The length property of an array returns the number of elements in the array. Example:
+```
+console.log(arrName.length)
+// Result: 3
+```
 
+### Nested Arrays
+Arrays can contain other arrays as elements, creating a nested array structure. You can access elements  in nested arrays using multiple indices. Example of nested array:
+```
+ler arrStudents = [["Thabang", 22, true], ["Karabi", 19, true], ["Matlou", 17, false]];
+console.log(arrStudents[0][0]);
+// Result: "Thabang"
+```
+### Modifying Arrays
+You can modify the elements in an array by accessing them via their index and assigning a new vaue. Example:
+```
+arrStudents[0][0] = "Mamoloko"
+// This assigns a new value
+```
+
+### ```push()```
+The ```push()``` adds one or more elements to the end of an array and returns the new length of the array. Example:
+```
+let fruits = ["Apple", "Grapes"];
+fruits.push("Banana"); // Adds "Banana" at the end of this array and returns the new length 2
+```
+
+### ```pop()```
